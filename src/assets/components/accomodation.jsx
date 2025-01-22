@@ -24,6 +24,11 @@ function Accommodation() {
   console.log(id);
   console.log(accommodations);
 
+  const capturingID = async (id) => {
+    // await accommodationPut(id);
+    console.log(`IT WORKS BITCH ${id}`);
+  };
+
   return (
     <div>
       <h1>Accommodations</h1>
@@ -31,7 +36,7 @@ function Accommodation() {
         return (
           <div className="hotel-container">
             <p className="hotel-name">{item.name}</p>
-            <Link to={`/update/${item.id}`}>Edit</Link>
+            <Link to={`/update/${item.id}`}>Update</Link>
           </div>
         );
       })}
